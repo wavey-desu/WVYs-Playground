@@ -1,0 +1,125 @@
+:root{
+    --theme1: rgba(31, 31, 46,1);
+    --theme2: rgb(70, 130, 180);
+    --theme3: rgb(248, 248, 255);
+    --theme4: #101010
+}
+
+.borderSect{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.borderCont{
+    position: relative;
+    width: 15rem;
+    height: 10rem;
+    /* border: 1px #87cefa solid; */
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 2rem;
+}
+/*BORDER 1 */
+.svg-border1{
+    fill: rgba(248, 248, 255,0);
+    stroke: var(--theme2);
+    stroke-width: 5px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    transition: 1.2s ease;
+    
+}
+.svg-wrapper1:hover .svg-border1{
+    stroke-dashoffset: 0;
+    fill: rgba(248, 248, 255,.1);
+}
+
+.svgText1{
+    fill: var(--theme3);
+    font-size: 1.3rem;
+}
+
+/* BORDER 2 */
+.svg-border2{
+    fill: rgba(248, 248, 255,.2);
+    stroke: var(--theme2);
+    stroke-width: 5px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-dasharray: 600;
+    stroke-dashoffset: -500;
+    transition: 1s ease;
+    
+}
+.svg-wrapper2:hover .svg-border2{
+    stroke-dashoffset: 0;
+    fill: rgba(248, 248, 255,.25);
+}
+
+.svgText2{
+    fill: var(--theme3);
+    font-size: 1.3rem;
+}
+
+/* BORDER 3 */
+.progressCircle{
+    stroke: var(--theme2);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease;
+}
+.svg-wrapper3:hover .progressCircle{
+    stroke-dashoffset: 135;
+}
+
+/* BORDER 4 */
+
+.border4{
+    position: relative;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    font-size: .6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--theme2);
+}
+.border4 h1{
+    z-index: 2;
+}
+.border4::before, .border4::after{
+    content: '';
+    position: absolute;
+    background: #575658;
+    background: #101014;
+    z-index: 1;
+    transition: 1s ease;
+}
+.border4::before{
+    height: 102px;
+    width: 180px;
+}
+.border4::after{
+    height: 80px;
+    width: 202px;
+}
+.border4:hover::before{
+    width: 0;
+}
+.border4:hover::after{
+    height: 0;
+}

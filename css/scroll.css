@@ -1,0 +1,98 @@
+:root{
+    --theme1: rgba(31, 31, 46,1);
+    --theme2: rgb(70, 130, 180);
+    --theme3: rgb(248, 248, 255);
+    --theme4: #101010
+}
+.scrollSect{
+    /* width: 100%;
+    height: 100%; */
+    overflow-y: scroll;
+}
+.scrollSect i{
+    position: sticky;
+    left: 50%;
+    bottom: 10px;
+    font-size: 2rem;
+    animation: scrollJump 2s ease infinite ;
+}
+@keyframes scrollJump{
+    75%{transform: translateY(10px);}
+    100%{transform: translateY(0px);}
+}
+
+.scrollCont{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    font-family: 'Secular One', sans-serif;
+}
+
+/* SCROLLER 1 */
+.scroll1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+/* SCROLLER 2 */
+.scroll2{
+    text-align: center;
+    font-size: 4rem;
+}
+.scroll2 h1{
+    position: relative;
+    top: 25%;
+    left: -70%;
+}
+
+/* SCROLLER 3 */
+.scroll3Cont{
+    position: relative;
+    top: 1rem;
+    left: 25%;
+    overflow: hidden;
+    width: 600px;
+    height: 80px;
+    font-size: 2rem;
+}
+.scroll3-wrapper{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.scroll3-rect{
+    transform: scaleX(0);
+}
+
+/* SCROLLER 4 */
+.scroll4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-bottom: 1rem; */
+}
+.neatText{
+    font-size: 6rem;
+    font-family: 'Bowlby One', sans-serif;
+    fill: var(--theme1);
+}
+
+/* SCROLLER 5 */
+.scroll5{
+    height: 1500px;
+    position: relative;
+    padding-bottom: 0rem;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; */
+}
+.pepeConst{
+    position: absolute;
+    transform: scaleX(1.7);
+    left: 180px;
+    top: -100px;
+    /* width: 100%; */
+    /* top: 2rem; */
+}

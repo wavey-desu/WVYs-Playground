@@ -1,0 +1,203 @@
+:root{
+    --color1: #87cefa;
+    --color2: rgba(67,7,128,1);
+    --color3: rgba(7,35,128,1);
+}
+
+.buttonsSect{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.buttonCont{
+    position: relative;
+    width: 10rem;
+    height: 6rem;
+    border: 1px mediumslateblue ;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1;
+}
+.buttonCont button{
+    width: 7rem;
+    height: 3rem;
+    border: none;
+    border-radius: .5rem;
+    font-family: 'Secular One', sans-serif;
+    font-size: 1.5rem;
+    z-index: 2;
+}
+/* 1ST BTN */
+.btn1{
+    background-color: lightskyblue;
+    box-shadow: .2rem .2rem .8rem rgb(35, 165, 246);
+    transition: all .25s ease-in-out;
+}
+.btn1:hover, .btn1:focus{
+    background-color: rgba(67,7,128,1);
+    box-shadow: 15px 0px 20px rgb(67, 7, 106);
+    transform: translateY(-.15rem);
+    color: #fff;
+}
+.btn1:active{
+    transform: translateY(-.01rem);
+}
+/* 2ND BTN */
+.btn2{
+    background: linear-gradient(106deg, rgba(135,206,250,1) 23%, rgba(7,35,128,1) 50%, rgba(67,7,128,1) 81%);
+    background-size: 200%;
+    background-position: left;
+    transition: all .25s ease-in-out;
+}
+.btn2:hover, .btn2:focus{
+    background-position: right;
+    color: #fff;
+}
+/* 3RD BTN */
+.btn3 {
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .btn3:before {
+    content: "";
+    background: linear-gradient(106deg, rgba(135,206,250,1) 23%, rgba(7,35,128,1) 50%, rgba(67,7,128,1) 81%);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingBtn 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowingBtn {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .btn3:active {
+    color: #000;
+  }
+  
+  .btn3:active:after {
+    background: transparent;
+  }
+  
+  .btn3:hover:before {
+    opacity: 1;
+  }
+  
+  .btn3:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  /* 4TH BTN */
+  .btn4{
+    background-color: var(--color1);
+    border-radius: .25rem;
+    border: 2px solid black;
+    box-shadow: 5px 5px 0 black,
+    -5px -5px 0 black,
+    -5px 5px 0 black,
+    5px -5px 0 black;
+    transition: .25s ease-in-out;
+  }
+  .btn4:hover{
+    box-shadow: 15px 5px 0 black, -15px -5px 0 black;
+  }
+
+  /* 5TH BTN */
+.btn5{
+    background: var(--color1);
+}
+.btn5::after{
+    position: absolute;
+    /* position: relative; */
+    content: "";
+    width: 0rem;
+    height: 3rem;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: -1;
+    border-radius: .4rem;
+    background: var(--color3);
+    transition: all 0.25s ease;
+}
+.btn5:hover{
+    color: ghostwhite;
+}
+.btn5:hover::after{
+    left: 1.5rem;
+    width: 7rem;
+}
+
+/* BTN 6 */
+.btn6{
+    display: flex;
+    align-items: center;
+    background: var(--color1);
+    transition: .25s ease-out;
+}
+.btn6 span{
+    transition: .25s ease-out;
+}
+.btn6:hover{
+    background: rgb(35, 165, 246);
+}
+.btn6Text{
+    font-size: 1rem;
+    transform: translate(15px);
+}
+.btn6:hover .btn6Text {
+	color: transparent;
+}
+.btn6Icon{
+    transform: translateX(1.5rem);
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    height: 100%;
+    transition: .2s ease-out;
+    font-size: 1.6rem;
+}
+.btn6:hover .btn6Icon {
+	font-size: 2rem;
+    transform: translateX(-.9rem);
+}
