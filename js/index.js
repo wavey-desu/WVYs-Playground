@@ -1,11 +1,9 @@
 $(document).ready(function(){
 
     window.onload = function () {
-        ScrollTrigger.refresh();
         sectionSelect(window.location.hash);
     }
     window.onhashchange = function () {
-        ScrollTrigger.refresh();
         sectionSelect(window.location.hash);
     }
 
