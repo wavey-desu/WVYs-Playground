@@ -25,6 +25,11 @@ $(document).ready(function(){
         setTimeout (()=> {
             switch (hash){
      
+                case "":
+                    $(".buttonsSect").fadeIn(600,"linear")
+                    $(".buttonsSect").addClass("activeSection");
+                break;
+
                 case "#buttons":
                     $(".buttonsSect").fadeIn(600,"linear")
                     $(".buttonsSect").addClass("activeSection");
