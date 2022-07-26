@@ -28,7 +28,7 @@
 }
 /* CARD1 */
 .card1{
-    background: url(/wvy-playground/resources/charizard-1.jpg) rgba(0, 0, 0, .65);
+    background: url(../resources/charizard-1.jpg) rgba(0, 0, 0, .65);
     background-size: 100%;
     background-position: center;
 }
@@ -230,7 +230,7 @@ h3 b{
 
 /* CARD 4 */
 .card4{
-    background: url(../resources/charizard-1.jpg);
+    background: url(../resources/charizard-1.jpg); 
     background-size: 100%;
     background-position: center;
     text-align: center;
